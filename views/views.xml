@@ -1,0 +1,23 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="diario_empresarial.list">
+      <field name="name">DiarioEmpresarial</field>
+      <field name="model">diario_empresarial.registro</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="description"/>
+          <field name="date"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="diario_empresarial.action">
+      <field name="name">DiarioEmpresarial</field>
+      <field name="res_model">diario_empresarial.registro</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  <menuitem name="DiarioEmpresarial" id="diario_empresarial_root" sequence='10' action='diario_empresarial.action'/>
+  </data>
+</odoo>
